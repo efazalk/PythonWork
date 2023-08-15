@@ -24,10 +24,13 @@ def whilefunction(number):
 def leapyearfunction():
     year = int(input("Enter year: "))
     leapcheck = year%4
+    leap = year%100
+    leaps = year%400
+
     if year%4 == 0:
         print("leap year")
     else:
-        print("{} not a leap year and this is leap `{}".format(year,leapcheck))
+        print("{} not a leap year and this is leap {}, {}, {}".format(year,leapcheck,leap,leaps))
         leapyearfunction()
 
 leapyearfunction()
